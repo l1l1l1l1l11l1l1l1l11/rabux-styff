@@ -193,24 +193,24 @@
         end
 
         function library:fade(obj, prop, vis, speed)
-            if not (obj and prop) then
-                return
-            end
-
-            local OldTransparency = obj[prop]
-            obj[prop] = vis and 1 or OldTransparency
-
-            local Tween = library:tween(obj, { [prop] = vis and OldTransparency or 1 })
-
-            library:connection(Tween.Completed, function()
-                if not vis then
-                    task.wait()
-                    obj[prop] = OldTransparency
-                end
-            end)
-
-            return Tween
+        if not (obj and prop) then
+            return
         end
+
+        local OldTransparency = obj[prop]
+        obj[prop] = vis and 1 or OldTransparency
+
+        local Tween = library:tween(obj, { [prop] = vis and OldTransparency or 1 })
+
+        library:connection(Tween.Completed, function()
+            if not vis then
+                task.wait()
+                obj[prop] = OldTransparency
+            end
+        end)
+
+        return Tween
+    end
 
         function library:resizify(frame) 
             local Frame = Instance.new("TextButton")
@@ -625,7 +625,7 @@
             local cfg = {
                 -- properties
                 name = properties.name or properties.Name or "visuals"; 
-                icon = properties.icon or properties.Icon or "http://www.roblox.com/asset/?id=72916143761195";
+                icon = properties.icon or properties.Icon or "http://www.roblox.com/asset/?id=101616085938229";
                 
                 items = {};
             } 
@@ -741,7 +741,7 @@
                 side = properties.side or properties.Side or "left";
                 default = properties.default or properties.Default or false;
                 size = properties.size or properties.Size or 0.5; 
-                icon = properties.icon or properties.Icon or "http://www.roblox.com/asset/?id=72916143761195";
+                icon = properties.icon or properties.Icon or "http://www.roblox.com/asset/?id=101616085938229";
                 fading_toggle = properties.fading or properties.Fading or false;
                 items = {};
             };
