@@ -625,7 +625,7 @@
             local cfg = {
                 -- properties
                 name = properties.name or properties.Name or "visuals"; 
-                icon = properties.icon or properties.Icon or "http://www.roblox.com/asset/?id=5750420886";
+                icon = properties.icon or properties.Icon or "http://www.roblox.com/asset/?id=72916143761195";
                 
                 items = {};
             } 
@@ -741,7 +741,7 @@
                 side = properties.side or properties.Side or "left";
                 default = properties.default or properties.Default or false;
                 size = properties.size or properties.Size or 0.5; 
-                icon = properties.icon or properties.Icon or "http://www.roblox.com/asset/?id=6438737796";
+                icon = properties.icon or properties.Icon or "http://www.roblox.com/asset/?id=72916143761195";
                 fading_toggle = properties.fading or properties.Fading or false;
                 items = {};
             };
