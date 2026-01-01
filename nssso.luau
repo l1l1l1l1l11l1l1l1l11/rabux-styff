@@ -60,7 +60,7 @@ local concat = table.concat
 
 -- Library init
 getgenv().library = {
-    directory = "femboy sense",
+    directory = "femboy.sense",
     folders = {
         "/fonts",
         "/configs",
